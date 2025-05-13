@@ -41,7 +41,7 @@ function PlayButton() {
       </button>
       <audio
         ref={audioRef}
-        src="http://172.232.62.146:8000/radio.mp3"
+        src="https://media.evenings.co/s/wLkwgp3q7"
         preload="auto"
       />
       <Marquee />

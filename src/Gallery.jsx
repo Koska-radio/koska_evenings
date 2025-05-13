@@ -21,8 +21,8 @@ function Gallery() {
       </div>
       <div className="right-section">
       {<nav className="page-navigation">
-            <Link to="/Home" className="nav-link">Home</Link>
-            <Link to="/" className="nav-link">Gallery</Link>
+            <Link to="/" className="nav-link">Home</Link>
+            <Link to="/Gallery" className="nav-link">Gallery</Link>
             <Link to="/Archive" className="nav-link">Archive</Link>
           </nav>}
         <div className="spline-container">

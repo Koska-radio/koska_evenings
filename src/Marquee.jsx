@@ -10,7 +10,7 @@ function Marquee() {
   const fetchStreamData = async () => {
     try {
       const response = await axios.get(
-        "https://radio.koskaradio.net/api/nowplaying/1",
+        "GET https://api.evenings.co/v1/streams/koska-radio/public",
         {
           params: { t: Date.now() }, // To bypass cache
         },
