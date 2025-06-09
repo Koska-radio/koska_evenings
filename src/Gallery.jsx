@@ -1,4 +1,5 @@
 import {Link} from 'react-router-dom';
+import PlayButton from "./PlayButton";
 import React from 'react';
 import catface from "./images/koska.webp";
 import "./style.css";
@@ -15,6 +16,7 @@ function Gallery() {
         <div className="media-container">
       <h2>GALLERY</h2>
       {/* Add your about page content */}
+          <PlayButton />
           <Marquee />
           <img src={catface} alt="Koska Logo" className="koska-logo" />
         </div>

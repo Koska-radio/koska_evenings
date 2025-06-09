@@ -1,5 +1,4 @@
 import React, { useState, useRef } from "react";
-import Marquee from "./Marquee";
 import "./style.css";
 
 function PlayButton() {
@@ -44,7 +43,6 @@ function PlayButton() {
         src="https://media.evenings.co/s/wLkwgp3q7"
         preload="auto"
       />
-      <Marquee />
     </div>
   );
 }

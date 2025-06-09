@@ -46,6 +46,7 @@ function Archive() {
                   <div key={track.id} className="track-item">
                     <h3>{track.title}</h3>
                     <p>Duration: {track.duration} | Listens: {track.listens} |URl: {track.weblink}</p>
+                    <img src={track.cover} alt = ""/>
                     <a href={track.weblink} target="_blank" rel="noopener noreferrer">Listen</a>
                   </div>
                 ))}
@@ -61,7 +62,7 @@ function Archive() {
           <nav className="page-navigation">
             <Link to="/" className="nav-link">Home</Link>
             <Link to="/Gallery" className="nav-link">Gallery</Link>
-            <Link to="/" className="nav-link">Archive</Link>
+            <Link to="/Archive" className="nav-link">Archive</Link>
           </nav>
           <div className="spline-container">
             <Spline />

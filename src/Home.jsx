@@ -5,8 +5,8 @@ import PlayButton from "./PlayButton";
 import Spline from "./Spline";
 import Marquee from "./Marquee";
 import footerlogo from "./images/DRAGON KOSKA (1).webp";
-import ScheduleWidget from "./ScheduleWidget";
 import {Link} from 'react-router-dom';
+import SimpleAPIViewer from "./SimpleAPIViewer";
 
 
 function Home() {
@@ -16,6 +16,7 @@ function Home() {
         <div className="left-section">
           <div className="media-container">
             <PlayButton />
+            <SimpleAPIViewer />
             <a
               href="https://radio.koskaradio.net/public/koska_radio"
               target="_blank"
@@ -107,7 +108,6 @@ function Home() {
           </p>
         </div>
       </footer>
-      <ScheduleWidget />
     </div>
     )
 }
