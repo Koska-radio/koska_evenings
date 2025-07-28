@@ -1,4 +1,30 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap&family=Rubik+80s+Fade&family=Handjet:wght@400;900&family=Gloria+Hallelujah&family=Rowdies:wght@300&family=Bacasime+Antique&family=Rock+Salt&family=Space+Mono:ital@0;1");
+/* New shit */
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #1a1a1a; /* Adjust to your preference */
+  color: white;
+  gap: 2rem;
+
+    /* Add these properties for fixed positioning */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000; /* Ensures navbar stays above other content */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: adds subtle shadow */
+}
+
+/* End */
 
 body {
   font-family: "Space Mono", monospace;
@@ -8,13 +34,22 @@ body {
   padding: 0 10px;
   overflow-x: hidden;
 }
-
+/* New  */
 .main-container {
   position: relative;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
+
+/* New */
+.main-content {
+  flex: 1;
+  padding: 2rem;
+  margin-top: 60px; /* Adjust based on your navbar height */
+
+}
+
 
 #content {
   display: flex;
@@ -89,21 +124,41 @@ body {
   font-weight: 500;
   padding: 5px 10px;
 }
-
-.nav-link:hover {
-  color: #a30e0e;
+/* New */
+.nav-links {  /* <- Added the dot here */
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
 }
 
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.nav-links a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.nav-links a.active {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* End New */
 .play-button {
-  font-size: 100px;
+  margin: 0 1rem; /* New */
+  font-size: 30px;
   border: 2px solid #333;
   border-radius: 20%;
   background: none;
-  margin-top: 10px; /* Adjust this value to position the button closer to the top */
-  color: #333;
+  /* margin-top: 10px; Adjust this value to position the button closer to the top */
+  color: #cb0f0f;
   cursor: pointer;
-  width: 150px;
-  height: 150px;
+  width: 30px;
+  height: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -130,7 +185,7 @@ body {
   left: 50%;
   margin: -40px 0 0 -40px;
 }
-
+/* 
 .marquee {
   overflow: hidden;
   white-space: nowrap;
@@ -147,8 +202,14 @@ body {
   animation: marquee 16s linear infinite;
   font-size: 20px;
   color: #333;
-}
+} */
 
+/* New */
+.marquee-container {
+  flex: 1;
+  overflow: hidden;
+}
+/* 
 @keyframes marquee {
   0% {
     transform: translateX(0%);
@@ -156,14 +217,16 @@ body {
   100% {
     transform: translateX(-100%);
   }
-}
+} */
+
+/* End New */
 
 .koska-logo {
-  width: 120%;
-  max-width: 550px;
-  height: auto;
-  margin: 5vh 0;
-  z-index: 10;
+  width: 3%;
+  /* max-width: 550px; */
+  height: 10%;
+  margin: rem;
+  z-index: 20;
 }
 
 .contact-section,
@@ -309,6 +372,22 @@ footer {
     width: 100%;
     padding: 0 15px;
   }
+
+  /* New Stuff from Evenings for mobile*/
+  .navbar {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .nav-links {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  
+  .marquee-container {
+    width: 100%;
+    order: 3;
+  }  
 }
 
 .schedule-widget-container {
@@ -326,3 +405,88 @@ footer {
   border: none; /* Remove border */
   background-color: transparent; /* Set the background to transparent */
 }
+
+/* New Video shit */
+/* Video Background Styles */
+.video-content-wrapper {
+  position: relative;
+  min-height: calc(100vh - 80px); /* Subtract navbar height */
+  overflow: hidden;
+}
+
+.video-background {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  min-height: 100vh;
+  width: auto;
+  height: 100vh;
+  z-index: -1;
+}
+
+.portrait-video {
+  width: auto;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Overlay Artist Name */
+.overlay-artist-name {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center; /* or 'flex-start' for left alignment */
+  align-items: center;
+  z-index: 5;
+  pointer-events: none;
+}
+
+.overlay-artist-name h1 {
+  font-size: clamp(3rem, 8vw, 6rem);
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  margin: 0;
+  text-align: center;
+  padding: 0 2rem; /* Prevent text from touching edges */
+}
+
+/* Ensure footer appears after video */
+.main-container footer {
+  position: relative;
+  z-index: 20;
+  margin-top: 100vh; /* Push footer below video */
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .video-background {
+    width: 100vw;
+    height: 100vh;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .portrait-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .overlay-artist-name h1 {
+    font-size: clamp(2rem, 6vw, 4rem);
+  }
+}
+
+/* For very wide screens, limit video width */
+@media (min-width: 1400px) {
+  .video-background {
+    max-width: 100vh; /* Maintain portrait aspect ratio */
+  }
+}
+/* End of New video shit */

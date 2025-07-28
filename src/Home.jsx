@@ -1,69 +1,47 @@
-import React from "react";
-import catface from "./images/koska.webp";
+import React, { useEffect, useRef, useState } from "react";
 import "./style.css";
-import PlayButton from "./PlayButton";
-import Spline from "./Spline";
-import Marquee from "./Marquee";
 import footerlogo from "./images/DRAGON KOSKA (1).webp";
-import {Link} from 'react-router-dom';
-import SimpleAPIViewer from "./SimpleAPIViewer";
-
 
 function Home() {
-    return (
-      <div className="main-container">
-      <div id="content">
-        <div className="left-section">
-          <div className="media-container">
-            <PlayButton />
-            <SimpleAPIViewer />
-            <a
-              href="https://radio.koskaradio.net/public/koska_radio"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="backup-stream-link"
-            >
-              Backup Stream
-            </a>
-            <Marquee />
-            <img src={catface} alt="Koska Logo" className="koska-logo" />
-          </div>
+  const [scrollY, setScrollY] = useState(0);
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  return (
+    <div className="main-container">
+      <div className="video-content-wrapper">
+        {/* Background Video */}
+        <div className="video-background">
+          <video 
+            ref={videoRef}
+            className="portrait-video"
+            autoPlay 
+            loop 
+            muted 
+            playsInline
+          >
+            <source src="/videos/DoomscrollShort.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
         </div>
-        <div className="right-section">
-        <nav className="page-navigation">
-              <Link to="/" className="nav-link">Home</Link>
-              <Link to="/Gallery" className="nav-link">Gallery</Link>
-              <Link to="/Archive" className="nav-link">Archive</Link>
-            </nav>
-          <div className="spline-container">
-            <Spline />
-          </div>
-          <div className="contact-section">
-            <h2>CONTACT</h2>
-            <p>
-              <a href="mailto:info@koskaradio.net">info@koskaradio.net</a>
-            </p>
-            <p>
-              <a
-                href="https://www.instagram.com/koska_radio/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Instagram
-              </a>
-            </p>
-            <p>
-              <a
-                href="https://on.soundcloud.com/LG9iX"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Soundcloud
-              </a>
-            </p>
-          </div>
+
+        {/* Scrolling Overlay Text */}
+        <div 
+          className="overlay-artist-name"
+          style={{ transform: `translateY(${scrollY * 0.1}px)` }}
+        >
+          <h1>EXAMPLE ARTIST NAME</h1>
         </div>
       </div>
+
       <footer>
         <div className="footer-left">
           <h2>About Us</h2>
@@ -81,12 +59,12 @@ function Home() {
           <p>
             Tune in live, right here, or using the back-up link for non-chrome
             and mobile streaming (still working on it, sorry). Re-listen to any
-            broadcast via Koska' s{" "}
+            broadcast via Koska's{" "}
             <a
               href="https://on.soundcloud.com/LG9iX"
               target="_blank"
               rel="noopener noreferrer"
-              class="soundcloud-link"
+              className="soundcloud-link"
             >
               <strong>Soundcloud</strong>
             </a>
@@ -109,7 +87,7 @@ function Home() {
         </div>
       </footer>
     </div>
-    )
+  );
 }
 
-export default Home
+export default Home;

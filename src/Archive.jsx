@@ -1,8 +1,7 @@
-import {Link} from 'react-router-dom';
-import catface from "./images/koska.webp";
+//import {Link} from 'react-router-dom';
+//import catface from "./images/koska.webp";
 import "./style.css";
-import Spline from "./Spline";
-import Marquee from "./Marquee";
+//import Marquee from "./Marquee";
 import footerlogo from "./images/DRAGON KOSKA (1).webp";
 import React, { useEffect, useState } from 'react';
 import { getAllTracks } from './getAllTracks';
@@ -46,27 +45,19 @@ function Archive() {
                   <div key={track.id} className="track-item">
                     <h3>{track.title}</h3>
                     <p>Duration: {track.duration} | Listens: {track.listens} |URl: {track.weblink}</p>
-                    <img src={track.cover} alt = ""/>
+                    <img src={track.cover} alt = "" style={{ width: '300px', height: '300px' }}/>
+                    <div >
                     <a href={track.weblink} target="_blank" rel="noopener noreferrer">Listen</a>
+                    </div>
                   </div>
                 ))}
               </div>
             )}
             
-            <Marquee />
-            <img src={catface} alt="Koska Logo" className="koska-logo" />
           </div>
         </div>
         
-        <div className="right-section">
-          <nav className="page-navigation">
-            <Link to="/" className="nav-link">Home</Link>
-            <Link to="/Gallery" className="nav-link">Gallery</Link>
-            <Link to="/Archive" className="nav-link">Archive</Link>
-          </nav>
-          <div className="spline-container">
-            <Spline />
-          </div>
+        {/* <div className="right-section">
           <div className="contact-section">
             <h2>CONTACT</h2>
             <p>
@@ -91,7 +82,7 @@ function Archive() {
               </a>
             </p>
           </div>
-        </div>
+        </div> */}
       </div>
       <footer>
         {/* Footer content unchanged */}

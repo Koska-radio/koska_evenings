@@ -1,36 +1,35 @@
-import {Link} from 'react-router-dom';
-import PlayButton from "./PlayButton";
+//import {Link} from 'react-router-dom';
+//import PlayButton from "./PlayButton";
 import React from 'react';
-import catface from "./images/koska.webp";
+//import catface from "./images/koska.webp";
 import "./style.css";
-///import PlayButton from "./PlayButton";
-import Spline from "./Spline";
-import Marquee from "./Marquee";
+///import Marquee from "./Marquee";
 import footerlogo from "./images/DRAGON KOSKA (1).webp";
 
 function Gallery() {
   return (
     <div className="main-container">
     <div id="content">
-      <div className="left-section">
         <div className="media-container">
-      <h2>GALLERY</h2>
-      {/* Add your about page content */}
-          <PlayButton />
-          <Marquee />
-          <img src={catface} alt="Koska Logo" className="koska-logo" />
+          <h1>Gallery</h1>
+          <div className="video-content-wrapper">
+            <iframe
+              src="https://www.youtube.com/embed/g4Y-YqvQODI?autoplay=1&mute=1&loop=1&playlist=g4Y-YqvQODI&controls=0&showinfo=0&modestbranding=1&iv_load_policy=3&rel=0"
+              frameBorder="0"
+              allow="autoplay; encrypted-media"
+              className="background-video"
+            ></iframe>
+          </div>
+          
+          <div className="overlay-content">
+            <div className="scrolling-text">
+              <span>Live Now: DJ Koska • Deep House Sessions • 120 BPM</span>
+            </div>
+
+    </div>
+          {/* Add your about page content */}
         </div>
-      </div>
-      <div className="right-section">
-      {<nav className="page-navigation">
-            <Link to="/" className="nav-link">Home</Link>
-            <Link to="/Gallery" className="nav-link">Gallery</Link>
-            <Link to="/Archive" className="nav-link">Archive</Link>
-          </nav>}
-        <div className="spline-container">
-          <Spline />
-        </div>
-        <div className="contact-section">
+        {/* <div className="contact-section">
           <h2>CONTACT</h2>
           <p>
             <a href="mailto:info@koskaradio.net">info@koskaradio.net</a>
@@ -53,8 +52,7 @@ function Gallery() {
               Soundcloud
             </a>
           </p>
-        </div>
-      </div>
+        </div> */}
     </div>
     <footer>
       <div className="footer-left">

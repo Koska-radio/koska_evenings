@@ -6,16 +6,15 @@ function Marquee() {
     title: "Loading...",
     artist: "",
   });
-  const [data, setData] = useState(null);
-  const [loading, setLoading] = useState(true);  
+  // const [data, setData] = useState(null);
+  // const [loading, setLoading] = useState(true);  
 
   const fetchStreamData = async () => {
     try {
       const response = await axios.get('https://api.evenings.co/v1/streams/koska-radio/public');
       setData(response.data);
-        {
-          // params: { t: Date.now() }, // To bypass cache
-        }
+      console.log("API Data:", response.data);
+      
       
 
       if (
