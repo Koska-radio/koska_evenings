@@ -1,0 +1,49 @@
+.marquee-container {
+  background-color: transparent; /* Changed from #000 to match your navbar */
+  color: #fff;
+  padding: 0 15px;
+  overflow: hidden;
+  white-space: nowrap;
+  box-sizing: border-box;
+  width: 100%;
+  flex: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.marquee-content {
+  display: inline-block;
+  padding-left: 100%;
+  animation: scroll-marquee 20s linear infinite;
+  font-size: 16px;
+}
+
+@keyframes scroll-marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.loading, .error {
+  text-align: center;
+  padding: 0 20px;
+  font-family: "Space Mono", monospace;
+  color: #fff;
+  white-space: nowrap;
+}
+
+.error {
+  color: #ff6b6b;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .marquee-content {
+    font-size: 14px;
+    animation-duration: 15s;
+  }
+}
