@@ -34,12 +34,12 @@ function Home() {
         </div>
 
         {/* Scrolling Overlay Text */}
-        <div 
+        {/* <div 
           className="overlay-artist-name"
           style={{ transform: `translateY(${scrollY * 0.1}px)` }}
         >
           <h1>EXAMPLE ARTIST NAME</h1>
-        </div>
+        </div> */}
       </div>
 
       <footer>

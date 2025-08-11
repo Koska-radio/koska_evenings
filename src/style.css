@@ -149,7 +149,7 @@ body {
 
 /* End New */
 .play-button {
-  margin: 0 1rem; /* New */
+  margin: 0 0.5rem; /* New */
   font-size: 30px;
   border: 2px solid #333;
   border-radius: 20%;
@@ -183,7 +183,7 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  margin: -40px 0 0 -40px;
+  margin: 0 0.5rem;
 }
 /* 
 .marquee {
@@ -226,7 +226,15 @@ body {
   /* max-width: 550px; */
   height: 10%;
   margin: rem;
-  z-index: 20;
+  z-index: 10;
+}
+
+.systm-logo {
+  width: 3%;
+  height: 10%;
+  margin: rem;
+  z-index: 10;
+  filter: invert(1); /* Invert the colors of the logo */
 }
 
 .contact-section,
