@@ -28,7 +28,7 @@ function PlayButton() {
   };
 
   return (
-    <div>
+    <>
       <button className="play-button" onClick={handlePlayToggle}>
         {isLoading ? (
           <div className="loading-circle"></div>
@@ -43,7 +43,7 @@ function PlayButton() {
         src="https://media.evenings.co/s/wLkwgp3q7"
         preload="auto"
       />
-    </div>
+    </>
   );
 }
 

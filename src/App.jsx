@@ -4,20 +4,19 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import PlayButton from "./PlayButton";
 import { NavLink } from 'react-router-dom';
 import Home from "./Home"
+import BackgroundLogo from "./BackgroundLogo";
 import Gallery from "./Gallery"
 import Archive from "./Archive"
 import catface from "./images/koska.webp";
-import SYSTM from "./images/SYSTM-logo-logo.png";
 import KoskaRadioMarquee from "./KoskaRadioMarquee";
 
 function App() {
   return (
     <BrowserRouter>
       <div className="app">
+        <BackgroundLogo />
         <header className="navbar">
           <img src={catface} alt="Koska Logo" className="koska-logo" />
-          <h2 className="app-title">X</h2>
-          <img src={SYSTM} alt="SYSTM Logo" className="systm-logo" />
           <nav className="nav-links">
             <NavLink to="/" className={({ isActive }) => isActive ? 'active' : ''}>
               Home
