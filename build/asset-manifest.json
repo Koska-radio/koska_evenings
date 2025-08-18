@@ -1,5 +1,6 @@
 {
   "files": {
+<<<<<<< HEAD
     "main.css": "/static/css/main.bdcefe1b.css",
     "main.js": "/static/js/main.d605f999.js",
     "static/js/872.fa320cb8.chunk.js": "/static/js/872.fa320cb8.chunk.js",
@@ -21,5 +22,19 @@
   "entrypoints": [
     "static/css/main.bdcefe1b.css",
     "static/js/main.d605f999.js"
+=======
+    "main.css": "/static/css/main.6bb37560.css",
+    "main.js": "/static/js/main.0a7d7e57.js",
+    "static/media/koska.webp": "/static/media/koska.5f5626efb87509732889.webp",
+    "static/media/SYSTM-logo-logo.png": "/static/media/SYSTM-logo-logo.dad9b88ed073c089e112.png",
+    "static/media/DRAGON KOSKA (1).webp": "/static/media/DRAGON KOSKA (1).edc58a00535d3a555ab9.webp",
+    "index.html": "/index.html",
+    "main.6bb37560.css.map": "/static/css/main.6bb37560.css.map",
+    "main.0a7d7e57.js.map": "/static/js/main.0a7d7e57.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6bb37560.css",
+    "static/js/main.0a7d7e57.js"
+>>>>>>> origin/NewPages
   ]
 }
