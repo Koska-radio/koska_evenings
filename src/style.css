@@ -1,0 +1,500 @@
+ @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap&family=Rubik+80s+Fade&family=Handjet:wght@400;900&family=Gloria+Hallelujah&family=Rowdies:wght@300&family=Bacasime+Antique&family=Rock+Salt&family=Space+Mono:ital@0;1");
+/* New shit */
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #1a1a1a; /* Adjust to your preference */
+  color: white;
+  gap: 2rem;
+
+    /* Add these properties for fixed positioning */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000; /* Ensures navbar stays above other content */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: adds subtle shadow */
+}
+
+/* End */
+
+body {
+  font-family: "Space Mono", monospace;
+  background-color: black;
+  color: rgb(163, 8, 8);
+  margin: 0;
+  padding: 0 10px;
+  overflow-x: hidden;
+}
+/* New  */
+.main-container {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* New */
+.main-content {
+  flex: 1;
+  padding: 2rem;
+  margin-top: 60px; /* Adjust based on your navbar height */
+
+}
+
+
+#content {
+  display: flex;
+  width: 100%;
+  align-items: stretch;
+  justify-content: flex-start;
+  padding: 1% 1% 1% 1%;
+  width: calc(100% - 35px);
+}
+
+.left-section,
+.right-section {
+  background-color: #e6e4e4;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  padding: 5%;
+  border: 1px solid #333;
+}
+
+.right-section {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-start; /* Aligns children to the left */
+  justify-content: space-between; /* Distributes space between spline-container and contact-section */
+  position: relative;
+  padding: 5%;
+  border: 1px solid #333;
+}
+
+.media-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Horizontally center children */
+  justify-content: flex-start; /* Align children to the top */
+}
+
+.archive-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Horizontally center children */
+  justify-content: flex-start; /* Align children to the top */
+}
+
+.backup-stream-link {
+  display: block;
+  font-size: 20px;
+  color: #333;
+  text-decoration: none;
+  margin-top: 20px;
+  text-align: center;
+  transition: color 0.3s ease;
+}
+
+.page-navigation {
+  margin-bottom: 24px;
+  z-index: 2;
+  position: relative;
+  display: flex;
+  justify-content: flex-end; /* or 'center' if you want centered links */
+  gap: 20px;
+  padding: 20px;
+  width: 100%;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #333; /* adjust color as needed */
+  font-weight: 500;
+  padding: 5px 10px;
+}
+/* New */
+.nav-links {  /* <- Added the dot here */
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.nav-links a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.nav-links a.active {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* End New */
+.play-button {
+  margin: 0 0.5rem; /* New */
+  font-size: 30px;
+  border: 2px solid #333;
+  border-radius: 20%;
+  background: none;
+  /* margin-top: 10px; Adjust this value to position the button closer to the top */
+  color: #cb0f0f;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-circle {
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-top: 4px solid white;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  animation: spin 2s linear infinite;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: 0 0.5rem;
+}
+/* 
+.marquee {
+  overflow: hidden;
+  white-space: nowrap;
+  position: absolute;
+  top: 20px;
+  left: 0;
+  width: 100%;
+  border-bottom: 1px solid #333;
+}
+
+.marquee span {
+  display: inline-block;
+  padding-left: 100%;
+  animation: marquee 16s linear infinite;
+  font-size: 20px;
+  color: #333;
+} */
+
+/* New */
+.marquee-container {
+  flex: 1;
+  overflow: hidden;
+}
+/* 
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+} */
+
+/* End New */
+
+.koska-logo {
+  width: 3%;
+  /* max-width: 550px; */
+  height: 10%;
+  margin: rem;
+  z-index: 10;
+}
+
+.systm-logo {
+  width: 3%;
+  height: 10%;
+  margin: rem;
+  z-index: 10;
+  filter: invert(1); /* Invert the colors of the logo */
+}
+
+.contact-section,
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.contact-section h2 {
+  color: #333;
+  align-self: flex-start; /* Aligns the h2 to the left of its container */
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.contact-section a {
+  color: #333;
+  font-size: 20px;
+  text-decoration: none;
+  margin: 2px 0; /* Reduced spacing between links */
+  display: inline-block;
+  transition: color 0.3s ease;
+}
+
+.contact-section a:hover,
+.backup-stream-link:hover {
+  text-decoration: underline;
+  color: rgb(30, 29, 29);
+}
+
+.spline-container {
+  width: 100%;
+  height: 400px;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 24px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  position: relative;
+  bottom: 0;
+  z-index: 1;
+  width: 100%;
+  border-top: 1px solid white;
+}
+
+.footer-left {
+  flex: 1; /* This will make it take up the remaining space after footer-right */
+  padding-right: 20px; /* Some padding to ensure it doesn't touch footer-right */
+  margin-left: 2%;
+}
+
+.soundcloud-link {
+  color: white; /* Set your desired default color */
+  text-decoration: none; /* Removes underline */
+}
+
+.soundcloud-link:hover {
+  text-decoration: underline;
+  color: white;
+}
+
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 40%; /* Adjust this value if needed */
+  padding: 20px;
+}
+
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.footer-right img {
+  max-width: 50%;
+  height: auto;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.footer-right p {
+  margin: 0;
+  text-align: center;
+  font-size: 18px; /* Adjust as needed */
+}
+
+.footer-right a {
+  color: rgb(212, 206, 206);
+  transition: color 0.3s ease;
+  text-decoration: none;
+}
+
+.footer-right a:hover {
+  text-decoration: underline;
+  color: white;
+}
+
+/* Mobile-specific styles */
+@media (max-width: 1000px) {
+  #content {
+    flex-direction: column;
+    width: 100%; /* Ensure full width */
+  }
+
+  .play-button {
+    font-size: 80px;
+    width: 100px;
+    height: 100px;
+    margin-top: 35px; /* Center the button if necessary */
+  }
+
+  footer {
+    flex-direction: column;
+    width: 100%; /* Ensure full width */
+    margin-bottom: 100px;
+  }
+
+  .koska-logo {
+    width: 100%;
+    margin: 2vh auto;
+    display: block;
+  }
+
+  .spline-container,
+  .contact-section,
+  .footer-left,
+  .footer-right {
+    width: 100%;
+    padding: 0 15px;
+  }
+
+  /* New Stuff from Evenings for mobile*/
+  .navbar {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .nav-links {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  
+  .marquee-container {
+    width: 100%;
+    order: 3;
+  }  
+}
+
+.schedule-widget-container {
+  display: flex;
+  justify-content: center; /* This will center the iframe horizontally */
+  padding-left: 45px; /* Adjust this to align with the footer-left content */
+  padding-right: 45px; /* Symmetric padding for aesthetics, adjust as needed */
+  margin-top: 30px; /* Space above the widget, adjust as needed */
+  margin-bottom: 20px; /* Space below the widget, adjust as needed */
+}
+
+.schedule-iframe {
+  width: 100%; /* Use 100% to make it responsive */
+  min-height: 500px; /* Minimum height for the iframe */
+  border: none; /* Remove border */
+  background-color: transparent; /* Set the background to transparent */
+}
+
+/* New Video shit */
+/* Video Background Styles */
+.video-content-wrapper {
+  position: relative;
+  min-height: calc(100vh - 80px); /* Subtract navbar height */
+  overflow: hidden;
+}
+
+.video-background {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  min-height: 100vh;
+  width: auto;
+  height: 100vh;
+  z-index: -1;
+}
+
+.portrait-video {
+  width: auto;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Overlay Artist Name */
+.overlay-artist-name {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center; /* or 'flex-start' for left alignment */
+  align-items: center;
+  z-index: 5;
+  pointer-events: none;
+}
+
+.overlay-artist-name h1 {
+  font-size: clamp(3rem, 8vw, 6rem);
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  margin: 0;
+  text-align: center;
+  padding: 0 2rem; /* Prevent text from touching edges */
+}
+
+/* Ensure footer appears after video */
+.main-container footer {
+  position: relative;
+  z-index: 20;
+  margin-top: 100vh; /* Push footer below video */
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .video-background {
+    width: 100vw;
+    height: 100vh;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .portrait-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .overlay-artist-name h1 {
+    font-size: clamp(2rem, 6vw, 4rem);
+  }
+}
+
+/* For very wide screens, limit video width */
+@media (min-width: 1400px) {
+  .video-background {
+    max-width: 100vh; /* Maintain portrait aspect ratio */
+  }
+}
+/* End of New video shit */
