@@ -1,7 +1,4 @@
 import React from "react";
-import footerlogo from "./images/DRAGON KOSKA (1).webp";
-import SYSTM from "./images/SYSTM-logo-logo.png";
-import catface from "./images/koska.webp";
 import koskaCopy from "./images/koska copy.jpg";
 
 function Footer() {
