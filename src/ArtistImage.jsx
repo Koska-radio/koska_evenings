@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import './Marquee.css'; // CSS file with same styles as above
+import bgPic from './images/DragonKoska.png';
+import './style.css';
 
-const KoskaRadioMarquee = () => {
+const ArtistImage = () => {
     const [streamData, setStreamData] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
@@ -21,22 +22,27 @@ const KoskaRadioMarquee = () => {
         };
 
         fetchData();
-        const interval = setInterval(fetchData, 3000); // Refresh every 3 seconds
+        const interval = setInterval(fetchData, 15000);
         return () => clearInterval(interval);
     }, []);
 
-    if (loading) return <div className="loading">Loading stream data...</div>;
+    if (loading) return <div className="loading">Loading stream cover...</div>;
     if (error) return <div className="error">Error: {error}</div>;
 
+    const isOffline = streamData.online === false;
+    const displayImage = isOffline ? bgPic : streamData.image;
+
     return (
-        <div className="marquee-container">
-            <div className="marquee-content">
-                {streamData.name}  -  
-                {streamData.name} -  
-                {streamData.name} -  
+        <div className="artist-image-container">
+            <div className="artist-image-content">
+                <img 
+                    src={displayImage} 
+                    alt={isOffline ? "Koska Radio Offline" : "Now Playing"} 
+                    className={isOffline ? "offline-image" : "online-image"}
+                />
             </div>
         </div>
     );
 };
 
-export default KoskaRadioMarquee;
+export default ArtistImage;

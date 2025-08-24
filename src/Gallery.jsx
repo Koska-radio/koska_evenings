@@ -17,6 +17,8 @@ function Gallery() {
               title="Koska Gallery Stream"
             ></iframe>
           </div>
+
+
           <div className="overlay-content">
             <div className="scrolling-text">
 

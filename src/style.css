@@ -704,6 +704,96 @@ body {
   color: white;
 }
 
+/* This is just for a quick visual demo */
+
+/* Artist Image Container */
+.artist-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.artist-image-content {
+    position: relative;
+    max-width: 300px;
+    width: 100%;
+    /* aspect-ratio: 1; Makes it square */
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.artist-image-content:hover {
+    transform: scale(1.02);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+}
+
+/* Image Styles */
+.artist-image-content img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: filter 0.5s ease;
+}
+
+/* Online Image (Normal) */
+.online-image {
+    filter: none;
+}
+
+/* Offline Image (Inverted Colors) */
+.offline-image {
+    filter: invert(1) hue-rotate(180deg);
+    /* Alternative option: */
+    /* filter: invert(1) brightness(0.8) contrast(1.2); */
+}
+
+/* Loading and Error States */
+.loading, .error {
+    text-align: center;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.loading {
+    color: #666;
+    font-style: italic;
+}
+
+.error {
+    color: #ff4444;
+    background-color: #ffebee;
+    border: 1px solid #ffcdd2;
+    border-radius: 8px;
+    margin: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .artist-image-container {
+        padding: 15px;
+    }
+    
+    .artist-image-content {
+        max-width: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .artist-image-container {
+        padding: 10px;
+    }
+    
+    .artist-image-content {
+        max-width: 200px;
+    }
+}
+
+/* End of demo */
 @media (max-width: 768px) {
   .artist-info-container {
     padding: 1rem;

@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import "./style.css";
 import Footer from "./Footer";
 import ArtistInfo from "./ArtistInfo";
+import ArtistImage from "./ArtistImage";
 
 function Home() {
   const [scrollY, setScrollY] = useState(0);
@@ -33,9 +34,11 @@ function Home() {
             playsInline
           >
             <source src="/videos/DoomscrollShort.mp4" type="video/mp4" />
+
             Your browser does not support the video tag.
           </video>
         </div>
+        <ArtistImage />
       </div>
       <ArtistInfo />
       <Footer />
