@@ -1,5 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap&family=Rubik+80s+Fade&family=Handjet:wght@400;900&family=Gloria+Hallelujah&family=Rowdies:wght@300&family=Bacasime+Antique&family=Rock+Salt&family=Space+Mono:ital@0;1");
 
+/* Breakpoint definitions for consistent responsive design:
+ * Mobile: max-width: 768px
+ * Tablet: max-width: 1024px
+ * Desktop: min-width: 1025px
+ * Ultra-wide: min-width: 1920px
+ */
+
 .app {
   min-height: 100vh;
   display: flex;
@@ -26,16 +33,14 @@
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
-/* End */
-
-body {
-  font-family: "Space Mono", monospace;
-  background-color: white;
-  color: rgb(51, 51, 51);
-  margin: 0;
-  padding: 0 10px;
-  overflow-x: hidden;
-}
+/* Z-index hierarchy:
+ * 1000: .navbar - Top navigation bar
+ * 10: .koska-logo, .systm-logo - Logo elements
+ * 5: .overlay-artist-name - Artist name overlay
+ * 2: .artist-info-container - Artist information
+ * 1: .main-container - Main content wrapper
+ * -1: .background-logo-container - Background elements
+ */
 
 .background-logo-container {
   position: fixed;
@@ -92,7 +97,7 @@ body {
 .media-container {
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* Horizontally center children */
+  align-items: flex-start; /* Align children to the left */
   justify-content: flex-start; /* Align children to the top */
 }
 
@@ -812,4 +817,105 @@ body {
   .visual-section h3 {
     font-size: 1.1rem;
   }
+}
+
+/* Setlist Component Styles */
+.setlist-container {
+    position: relative;
+    width: 100%;
+    height: 100%; /* Fill the column height */
+    overflow: hidden;
+    border-radius: 0; /* Remove border radius for seamless connection */
+    box-shadow: none; /* Remove shadow for seamless connection */
+}
+
+.setlist-background-gif {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.setlist-text-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.setlist-scrolling-text {
+    position: absolute;
+    width: 100%;
+    padding: 30px 20px;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.9);
+    text-align: center;
+    white-space: pre-wrap;
+    line-height: 1.6;
+    animation: setlistScrollDown 20s linear infinite;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.1) 0%,
+        rgba(0, 0, 0, 0.4) 50%,
+        rgba(0, 0, 0, 0.1) 100%
+    );
+    border-radius: 10px;
+}
+
+@keyframes setlistScrollDown {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    5% {
+        opacity: 1;
+    }
+    95% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(calc(100vh + 100%));
+        opacity: 0;
+    }
+}
+
+.setlist-loading,
+.setlist-error {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    font-size: 16px;
+    background: #f0f0f0;
+}
+
+.setlist-error {
+    color: #d32f2f;
+    background: #ffebee;
+}
+
+.setlist-loading {
+    color: #666;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .setlist-scrolling-text {
+        font-size: 16px;
+        padding: 20px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .setlist-scrolling-text {
+        font-size: 14px;
+        padding: 15px 10px;
+    }
 }

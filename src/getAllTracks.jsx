@@ -26,7 +26,8 @@ async function getAllTracks() {
         duration: track.duration,
         filetype: track.filetype,
         listens: track.listens,
-        cover: track.image
+        cover: track.image,
+        published: track.published
       };
       
       console.log(
@@ -38,7 +39,7 @@ async function getAllTracks() {
     
     console.log(`===== TOTAL: ${extractedTracks.length} TRACKS =====`);
     
-    return extractedTracks;
+  return extractedTracks.filter(track => track.published !== false);
   } catch (error) {
     console.error('Error fetching tracks:', error);
     throw error;
