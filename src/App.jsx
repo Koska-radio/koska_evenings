@@ -7,7 +7,7 @@ import Home from "./Home"
 import BackgroundLogo from "./BackgroundLogo";
 import Gallery from "./Gallery"
 import Archive from "./Archive"
- import catface from "./images/koska.webp";
+import catface from "./images/koska.webp";
 import KoskaRadioMarquee from "./KoskaRadioMarquee";
 
 function App() {
