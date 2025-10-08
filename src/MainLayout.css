@@ -1,0 +1,71 @@
+.main-layout-container {
+    width: 100%;
+    min-height: 100vh;
+}
+
+.three-column-wrapper {
+    display: flex;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    gap: 0; /* No gap between components */
+}
+
+.column {
+    flex: 1; /* Each column takes equal width (33.33%) */
+    height: 100%;
+    display: flex;
+    align-items: stretch; /* Make children fill height */
+}
+
+/* Ensure all child components fill their containers */
+.column > * {
+    width: 100%;
+    height: 100%;
+    flex: 1;
+}
+
+/* Video component specific styles */
+.video-content-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.video-background {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.portrait-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Mobile responsive - stack vertically */
+@media (max-width: 768px) {
+    .three-column-wrapper {
+        flex-direction: column;
+        height: auto; /* Allow natural height on mobile */
+    }
+    
+    .column {
+        width: 100%;
+        height: 50vh; /* Each component gets 50% of viewport height on mobile */
+        min-height: 300px; /* Minimum height to ensure visibility */
+    }
+    
+    .main-layout-container {
+        min-height: auto;
+    }
+}
+
+/* Extra small mobile devices */
+@media (max-width: 480px) {
+    .column {
+        height: 40vh;
+        min-height: 250px;
+    }
+}
