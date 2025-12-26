@@ -2,12 +2,8 @@ import axios from 'axios';
 
 async function getAllTracks() {
   try {
-    // Include your API key in the request headers
-    const response = await axios.get('https://api.evenings.co/v1/tracks/', {
-      headers: {
-        'Authorization': `Bearer ${process.env.REACT_APP_API_KEY}`
-      }
-    });
+    // Call Netlify Function instead of API directly 
+    const response = await axios.get('/.netlify/functions/getTracks');
     
     const tracks = response.data;
     
