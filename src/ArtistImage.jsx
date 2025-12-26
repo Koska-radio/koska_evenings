@@ -34,13 +34,18 @@ const ArtistImage = () => {
 
     return (
         <div className="artist-image-container">
-            <div className="artist-image-content">
+            <a 
+                href="https://evenings.fm/koska-radio" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="artist-image-content"
+            >
                 <img 
                     src={displayImage} 
                     alt={isOffline ? "Koska Radio Offline" : "Now Playing"} 
                     className={isOffline ? "offline-image" : "online-image"}
                 />
-            </div>
+            </a>
         </div>
     );
 };

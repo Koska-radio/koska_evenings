@@ -13,6 +13,8 @@ const Setlist = () => {
                 const response = await fetch('https://api.evenings.co/v1/streams/koska-radio/public/');
                 if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
                 const data = await response.json();
+                console.log('Setlist API Response:', data);
+                console.log('Setlist Description:', data.description);
                 setSetlistData(data.description || '');
                 setLoading(false);
             } catch (err) {
@@ -28,7 +30,7 @@ const Setlist = () => {
 
     if (loading) return <div className="setlist-loading">Loading setlist...</div>;
     if (error) return <div className="setlist-error">Error loading setlist: {error}</div>;
-    if (!setlistData) return null;
+    if (!setlistData) return <div className="setlist-error">No setlist data available</div>;
 
     return (
         <div className="setlist-container">
