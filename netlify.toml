@@ -3,6 +3,10 @@
   command = "npm run build"
   functions = "netlify/functions"
 
+# Exclude REACT_APP_API_URL from secrets scanning (it's a public API endpoint, not a secret)
+[build.environment]
+  SECRETS_SCAN_OMIT_KEYS = "REACT_APP_API_URL"
+
 [[redirects]]
   from = "/*"
   to = "/index.html"
