@@ -47,3 +47,14 @@
     animation-duration: 15s;
   }
 }
+
+@media (max-width: 480px) {
+  .marquee-content {
+    font-size: 12px;
+    animation-duration: 12s;
+  }
+
+  .marquee-container {
+    padding: 0 10px;
+  }
+}

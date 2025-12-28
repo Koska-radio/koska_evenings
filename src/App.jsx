@@ -1,13 +1,11 @@
 import React from "react";
-import "./style.css";
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import "./App.css";
+import { BrowserRouter, Routes, Route, NavLink } from 'react-router-dom';
 import PlayButton from "./PlayButton";
-import { NavLink } from 'react-router-dom';
-import Home from "./Home"
+import Home from "./Home";
 import BackgroundLogo from "./BackgroundLogo";
-import Gallery from "./Gallery"
-import Archive from "./Archive"
-// import catface from "./images/koska.webp";
+import Gallery from "./Gallery";
+import Archive from "./Archive";
 import KoskaRadioMarquee from "./KoskaRadioMarquee";
 
 function App() {
@@ -16,7 +14,6 @@ function App() {
       <div className="app">
         <BackgroundLogo />
         <header className="navbar">
-          {/* <img src={catface} alt="Koska Logo" className="koska-logo" /> */}
           <nav className="nav-links">
             <NavLink to="/" className={({ isActive }) => isActive ? 'active' : ''}>
               Home
@@ -30,7 +27,6 @@ function App() {
           </nav>
           <PlayButton />
           <KoskaRadioMarquee />
-          {/* <img src={catface} alt="Koska Logo" className="koska-logo" /> */}
         </header>
         
         <main className="main-content">

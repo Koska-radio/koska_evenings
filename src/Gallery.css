@@ -1,0 +1,130 @@
+/* ==========================================
+   GALLERY PAGE STYLES
+   ========================================== */
+
+.gallery-container {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  overflow-y: auto;
+}
+
+.gallery-content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 30px;
+  max-width: 1400px;
+  width: 100%;
+}
+
+.gallery-video {
+  max-width: 800px;
+  width: 60%;
+  aspect-ratio: 16 / 9;
+  flex-shrink: 0;
+}
+
+.schedule-container {
+  flex: 1;
+  max-width: 500px;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(5px);
+}
+
+.schedule-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.schedule-list li {
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 14px;
+  line-height: 1.6;
+  color: #444;
+}
+
+.schedule-list li:last-child {
+  border-bottom: none;
+}
+
+.schedule-list strong {
+  color: #444;
+  font-weight: 600;
+  display: inline-block;
+  min-width: 110px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .gallery-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .gallery-video {
+    width: 90%;
+    max-width: 800px;
+  }
+
+  .schedule-container {
+    width: 90%;
+    max-width: 800px;
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery-container {
+    padding: 20px 10px;
+  }
+
+  .gallery-video {
+    width: 95%;
+  }
+
+  .schedule-container {
+    width: 95%;
+    padding: 15px;
+  }
+
+  .schedule-list li {
+    font-size: 13px;
+    padding: 8px 0;
+  }
+
+  .schedule-list strong {
+    min-width: 90px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-container {
+    padding: 15px 5px;
+  }
+
+  .gallery-video {
+    width: 100%;
+  }
+
+  .schedule-container {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .schedule-list li {
+    font-size: 12px;
+  }
+
+  .schedule-list strong {
+    display: block;
+    margin-bottom: 4px;
+    min-width: auto;
+  }
+}

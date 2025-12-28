@@ -13,9 +13,6 @@ function Marquee() {
     try {
       const response = await axios.get('https://api.evenings.co/v1/streams/koska-radio/public');
       setData(response.data);
-      console.log("API Data:", response.data);
-      
-      
 
       if (
         response.data &&
@@ -25,11 +22,9 @@ function Marquee() {
         const { title, artist } = response.data.now_playing.song;
         setStreamInfo({ title, artist });
       } else {
-        console.warn("Unexpected response structure:", response.data);
         setStreamInfo({ title: "Failed to fetch title", artist: "" });
       }
     } catch (error) {
-      console.error("Error fetching stream data:", error);
       setStreamInfo({ title: "Failed to fetch title", artist: "" });
     }
   };

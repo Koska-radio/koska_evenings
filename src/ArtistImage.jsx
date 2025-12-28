@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import bgPic from './images/DragonKoska.png';
-import './style.css';
+import './ArtistImage.css';
 
 const ArtistImage = () => {
     const [streamData, setStreamData] = useState(null);
@@ -44,6 +44,7 @@ const ArtistImage = () => {
                     src={displayImage} 
                     alt={isOffline ? "Koska Radio Offline" : "Now Playing"} 
                     className={isOffline ? "offline-image" : "online-image"}
+                    loading="lazy"
                 />
             </a>
         </div>

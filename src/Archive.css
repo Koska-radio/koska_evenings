@@ -1,0 +1,150 @@
+/* ==========================================
+   ARCHIVE PAGE STYLES
+   ========================================== */
+
+.archive-container {
+  width: 90%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.tracks-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 30px;
+  width: 100%;
+}
+
+.track-item {
+  background: transparent;
+  overflow: hidden;
+  transition: transform 0.2s ease;
+}
+
+.track-item:hover {
+  transform: translateY(-2px);
+}
+
+.track-image-container {
+  position: relative;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+}
+
+.track-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.track-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.track-image-container:hover .track-overlay {
+  opacity: 1;
+}
+
+.play-overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 48px;
+  transition: transform 0.3s ease;
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+  line-height: 1;
+}
+
+.play-overlay:hover {
+  transform: scale(1.1);
+  opacity: 0.9;
+}
+
+.track-info {
+  padding: 16px;
+  background-color: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+.track-info h3 {
+  margin: 0 0 8px 0;
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+.track-details {
+  display: flex;
+  gap: 16px;
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+}
+
+.track-details span {
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .archive-container {
+    width: 95%;
+    padding: 30px 15px;
+  }
+
+  .tracks-grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .archive-container {
+    width: 100%;
+    padding: 20px 10px;
+  }
+
+  .tracks-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+  }
+
+  .track-info h3 {
+    font-size: 14px;
+  }
+
+  .track-details {
+    font-size: 12px;
+    gap: 12px;
+  }
+
+  .play-overlay {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 480px) {
+  .tracks-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .track-info {
+    padding: 12px;
+  }
+}

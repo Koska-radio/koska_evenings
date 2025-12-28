@@ -1,3 +1,8 @@
+/* ==========================================
+   GLOBAL STYLES & RESETS
+   Base typography, shared utilities
+   ========================================== */
+
 body {
   margin: 0;
   font-family: "Space Mono", monospace;
@@ -12,4 +17,28 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+/* ==========================================
+   SHARED UTILITY CLASSES
+   ========================================== */
+
+/* Loading and Error States */
+.loading, .error {
+  text-align: center;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.loading {
+  color: #666;
+  font-style: italic;
+}
+
+.error {
+  color: #ff4444;
+  background-color: #ffebee;
+  border: 1px solid #ffcdd2;
+  border-radius: 8px;
+  margin: 20px;
 }

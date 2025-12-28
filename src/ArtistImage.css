@@ -1,0 +1,75 @@
+/* ==========================================
+   ARTIST IMAGE COMPONENT STYLES
+   ========================================== */
+
+.artist-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.artist-image-content {
+  position: relative;
+  max-width: 300px;
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  display: block;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.artist-image-content:hover {
+  transform: scale(1.02);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+}
+
+/* Image Styles */
+.artist-image-content img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: filter 0.5s ease;
+}
+
+/* Online Image (Normal) */
+.online-image {
+  filter: none;
+}
+
+/* Offline Image (Inverted Colors) */
+.offline-image {
+  filter: invert(1) hue-rotate(180deg);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .artist-image-content {
+    max-width: 280px;
+  }
+}
+
+@media (max-width: 768px) {
+  .artist-image-container {
+    padding: 15px;
+  }
+  
+  .artist-image-content {
+    max-width: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .artist-image-container {
+    padding: 10px;
+  }
+  
+  .artist-image-content {
+    max-width: 200px;
+  }
+}

@@ -1,4 +1,5 @@
 import React from 'react';
+import './ArtistInfo.css';
 
 function ArtistInfo() {
 return (
