@@ -15,7 +15,7 @@
 .marquee-content {
   display: inline-block;
   padding-left: 100%;
-  animation: scroll-marquee 20s linear infinite;
+  animation: scroll-marquee 35s linear infinite;
   font-size: 16px;
 }
 

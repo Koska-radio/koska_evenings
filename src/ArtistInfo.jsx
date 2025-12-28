@@ -47,7 +47,7 @@ return (
                         rel="noopener noreferrer"
                         className="social-link"
                     >
-                        kiosk radio show
+                        bop fantasies
                     </a>
                 </div>
             </div>

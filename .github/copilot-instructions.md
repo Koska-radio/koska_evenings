@@ -51,7 +51,7 @@
 
 ### Styling Patterns
 - **CSS Files:**
-  - `src/style.css` - Main global styles
+  - `src/App.css` - Main global styles
   - `src/index.css` - Root and typography styles
   - `src/MainLayout.css` - Three-column layout styles
   - `src/Marquee.css` - Marquee animation styles
@@ -197,7 +197,7 @@ exports.handler = async function(event, context) {
 - `src/Archive.jsx` - Track archive grid with API integration
 - `src/getAllTracks.jsx` - Track fetching utility that calls Netlify Functions (not direct API)
 - `netlify/functions/getTracks.js` - Serverless function for secure track fetching with authentication
-- `src/style.css` - Main stylesheet
+- `src/App.css` - Main stylesheet
 - `package.json` - Dependencies and scripts
 - `netlify.toml` - Deployment and build configuration (includes functions directory)
 - `.env` - Local environment variables (gitignored)

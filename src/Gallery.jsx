@@ -1,5 +1,7 @@
 import React from 'react';
 import "./Gallery.css";
+import ScheduleItem from './ScheduleItem';
+import scheduleData from './scheduleData';
 
 function Gallery() {
   return (
@@ -17,16 +19,17 @@ function Gallery() {
         
         <div className="schedule-container">
           <ul className="schedule-list">
-            <li><strong>12:00-12:43:</strong> Cultural Imperialism Mix w/ Emily Zorro</li>
-            <li><strong>12:43-1:43:</strong> Ponder w/ Cröak</li>
-            <li><strong>1:43-2:36:</strong> Ruta #88 w/ Dianoches</li>
-            <li><strong>2:36-3:47:</strong> biking around my head w/ ant</li>
-            <li><strong>3:47-4:46:</strong> sunsunsun w/ Magi Ludi</li>
-            <li><strong>4:46-5:50:</strong> lossless w/ neorah</li>
-            <li><strong>5:50-6:34:</strong> Altered Religion w/ jun33</li>
-            <li><strong>6:34-7:34:</strong> Are u drunk? w/ Loronze Luego</li>
-            <li><strong>7:34-8:35:</strong> MT1 w/ she_skin</li>
-            <li><strong>8:35-9:35:</strong> Sounds of Late Night London w/ Ifeoluwa</li>
+            {scheduleData.map((item) => (
+              <ScheduleItem
+                key={item.id}
+                time={item.time}
+                title={item.title}
+                artist={item.artist}
+                description={item.description}
+                genres={item.genres}
+                links={item.links}
+              />
+            ))}
           </ul>
         </div>
       </div>
