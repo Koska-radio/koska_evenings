@@ -1,17 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.03704941.css",
-    "main.js": "/static/js/main.2d17c758.js",
-    "static/media/systmXkoska_waterfall.gif": "/static/media/systmXkoska_waterfall.4d20d7a6bef87bbf91a9.gif",
+    "main.css": "/static/css/main.c5a68b00.css",
+    "main.js": "/static/js/main.6e99ca82.js",
     "static/media/koska copy.jpg": "/static/media/koska copy.ee10ed5ca90d51428643.jpg",
     "static/media/DragonKoska.png": "/static/media/DragonKoska.b0a3b47ddbf4ada70be6.png",
     "static/media/SYSTM-logo-logo.png": "/static/media/SYSTM-logo-logo.dad9b88ed073c089e112.png",
     "index.html": "/index.html",
-    "main.03704941.css.map": "/static/css/main.03704941.css.map",
-    "main.2d17c758.js.map": "/static/js/main.2d17c758.js.map"
+    "main.c5a68b00.css.map": "/static/css/main.c5a68b00.css.map",
+    "main.6e99ca82.js.map": "/static/js/main.6e99ca82.js.map"
   },
   "entrypoints": [
-    "static/css/main.03704941.css",
-    "static/js/main.2d17c758.js"
+    "static/css/main.c5a68b00.css",
+    "static/js/main.6e99ca82.js"
   ]
 }

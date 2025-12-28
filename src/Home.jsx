@@ -1,4 +1,4 @@
-import "./style.css";
+import "./App.css";
 import Footer from "./Footer";
 import ArtistInfo from "./ArtistInfo";
 import MainLayout from "./MainLayout";
