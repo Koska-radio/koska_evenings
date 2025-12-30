@@ -122,7 +122,7 @@ It might be best suited for your local kethead or
 doomy tiktoker.
     `.trim(),
     links: {
-      soundcloud: "https://soundcloud.com/neorah"
+      soundcloud: "https://soundcloud.com/kioskradio/haroen-kiosk-radio-02-04-2025?si=e7151e72dcfb413eb1d6ee8d0c4a20e3&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
     }
   },
   {

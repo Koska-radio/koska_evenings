@@ -1,16 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.8fcc8963.css",
-    "main.js": "/static/js/main.fdeaf725.js",
+    "main.css": "/static/css/main.84cc370b.css",
+    "main.js": "/static/js/main.ec676e55.js",
+    "static/media/schedule_background.png": "/static/media/schedule_background.37ca169d2b30c9d0625c.png",
     "static/media/koska copy.jpg": "/static/media/koska copy.ee10ed5ca90d51428643.jpg",
-    "static/media/DragonKoska.png": "/static/media/DragonKoska.b0a3b47ddbf4ada70be6.png",
+    "static/media/koska.webp": "/static/media/koska.5f5626efb87509732889.webp",
     "static/media/SYSTM-logo-logo.png": "/static/media/SYSTM-logo-logo.dad9b88ed073c089e112.png",
     "index.html": "/index.html",
-    "main.8fcc8963.css.map": "/static/css/main.8fcc8963.css.map",
-    "main.fdeaf725.js.map": "/static/js/main.fdeaf725.js.map"
+    "main.84cc370b.css.map": "/static/css/main.84cc370b.css.map",
+    "main.ec676e55.js.map": "/static/js/main.ec676e55.js.map"
   },
   "entrypoints": [
-    "static/css/main.8fcc8963.css",
-    "static/js/main.fdeaf725.js"
+    "static/css/main.84cc370b.css",
+    "static/js/main.ec676e55.js"
   ]
 }

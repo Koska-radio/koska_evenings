@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import bgPic from './images/DragonKoska.png';
+import bgPic from './images/schedule_background.png';
 import './ArtistImage.css';
 
 const ArtistImage = () => {
@@ -46,6 +46,10 @@ const ArtistImage = () => {
                     className={isOffline ? "offline-image" : "online-image"}
                     loading="lazy"
                 />
+                <div className="play-overlay">
+                    <div className="play-icon">▶</div>
+                    <span className="play-text">Listen on Evenings</span>
+                </div>
             </a>
         </div>
     );
