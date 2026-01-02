@@ -1,4 +1,5 @@
 import React from "react";
+import "./Footer.css";
 import koskaCopy from "./images/koska copy.jpg";
 
 function Footer() {
@@ -30,7 +31,12 @@ function Footer() {
         </p>
       </div>
       <div className="footer-right">
-        <img src={koskaCopy} alt="Koska Artwork" className="footer-image" />
+        <img 
+          src={koskaCopy} 
+          alt="Koska Artwork" 
+          className="footer-image"
+          loading="lazy"
+        />
       </div>
     </footer>
   );

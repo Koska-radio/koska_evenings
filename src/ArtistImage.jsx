@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import bgPic from './images/DragonKoska.png';
-import './style.css';
+import bgPic from './images/schedule_background.png';
+import './ArtistImage.css';
 
 const ArtistImage = () => {
     const [streamData, setStreamData] = useState(null);
@@ -34,13 +34,23 @@ const ArtistImage = () => {
 
     return (
         <div className="artist-image-container">
-            <div className="artist-image-content">
+            <a 
+                href="https://evenings.fm/koska-radio" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="artist-image-content"
+            >
                 <img 
                     src={displayImage} 
                     alt={isOffline ? "Koska Radio Offline" : "Now Playing"} 
                     className={isOffline ? "offline-image" : "online-image"}
+                    loading="lazy"
                 />
-            </div>
+                <div className="play-overlay">
+                    <div className="play-icon">▶</div>
+                    <span className="play-text">Listen on Evenings</span>
+                </div>
+            </a>
         </div>
     );
 };

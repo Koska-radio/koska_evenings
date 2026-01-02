@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import setlistBg from './images/systmXkoska_waterfall.gif'; // Replace with your actual GIF filename
-import './style.css';
+import './Setlist.css';
 
 const Setlist = () => {
     const [setlistData, setSetlistData] = useState('');
@@ -28,15 +27,20 @@ const Setlist = () => {
 
     if (loading) return <div className="setlist-loading">Loading setlist...</div>;
     if (error) return <div className="setlist-error">Error loading setlist: {error}</div>;
-    if (!setlistData) return null;
+    if (!setlistData) return <div className="setlist-error">No setlist data available</div>;
 
     return (
         <div className="setlist-container">
-            <img 
-                src={setlistBg} 
-                alt="Setlist Background" 
+            <video 
+                autoPlay 
+                loop 
+                muted 
+                playsInline
                 className="setlist-background-gif"
-            />
+            >
+                <source src="/videos/waterfall.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+            </video>
             <div className="setlist-text-overlay">
                 <div className="setlist-scrolling-text">
                     {setlistData}

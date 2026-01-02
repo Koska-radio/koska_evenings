@@ -1,5 +1,5 @@
 import React from 'react';
-import './style.css';
+import './App.css';
 import SYSTM from "./images/SYSTM-logo-logo.png";
 
 const BackgroundLogo = () => {

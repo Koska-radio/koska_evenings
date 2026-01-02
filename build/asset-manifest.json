@@ -1,16 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.c860128f.css",
-    "main.js": "/static/js/main.1f39ad6c.js",
+    "main.css": "/static/css/main.84cc370b.css",
+    "main.js": "/static/js/main.ec676e55.js",
+    "static/media/schedule_background.png": "/static/media/schedule_background.37ca169d2b30c9d0625c.png",
     "static/media/koska copy.jpg": "/static/media/koska copy.ee10ed5ca90d51428643.jpg",
     "static/media/koska.webp": "/static/media/koska.5f5626efb87509732889.webp",
     "static/media/SYSTM-logo-logo.png": "/static/media/SYSTM-logo-logo.dad9b88ed073c089e112.png",
     "index.html": "/index.html",
-    "main.c860128f.css.map": "/static/css/main.c860128f.css.map",
-    "main.1f39ad6c.js.map": "/static/js/main.1f39ad6c.js.map"
+    "main.84cc370b.css.map": "/static/css/main.84cc370b.css.map",
+    "main.ec676e55.js.map": "/static/js/main.ec676e55.js.map"
   },
   "entrypoints": [
-    "static/css/main.c860128f.css",
-    "static/js/main.1f39ad6c.js"
+    "static/css/main.84cc370b.css",
+    "static/js/main.ec676e55.js"
   ]
 }

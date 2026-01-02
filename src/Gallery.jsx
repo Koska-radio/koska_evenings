@@ -1,32 +1,38 @@
 import React from 'react';
-import "./style.css";
-import Footer from './Footer';
+import "./Gallery.css";
+import ScheduleItem from './ScheduleItem';
+import scheduleData from './scheduleData';
 
 function Gallery() {
   return (
-    <div className="main-container">
-      <div id="content">
-        <div className="media-container">
-
-          <div className="video-content-wrapper">
-            <iframe
-              src="https://www.youtube.com/embed/g4Y-YqvQODI?autoplay=1&mute=1&loop=1&playlist=g4Y-YqvQODI&controls=0&showinfo=0&modestbranding=1&iv_load_policy=3&rel=0"
-              frameBorder="0"
-              allow="autoplay; encrypted-media"
-              className="background-video"
-              title="Koska Gallery Stream"
-            ></iframe>
-          </div>
-
-
-          <div className="overlay-content">
-            <div className="scrolling-text">
-
-            </div>
-          </div>
+    <div className="gallery-container">
+      <div className="gallery-content">
+        <iframe
+          src="https://www.youtube-nocookie.com/embed/x7yUjOFCPzg?si=sSDrtLpDhlsQKXB_"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerPolicy="strict-origin-when-cross-origin"
+          allowFullScreen
+          className="gallery-video"
+          title="YouTube video player"
+        ></iframe>
+        
+        <div className="schedule-container">
+          <ul className="schedule-list">
+            {scheduleData.map((item) => (
+              <ScheduleItem
+                key={item.id}
+                time={item.time}
+                title={item.title}
+                artist={item.artist}
+                description={item.description}
+                genres={item.genres}
+                links={item.links}
+              />
+            ))}
+          </ul>
         </div>
       </div>
-      <Footer />
     </div>
   );
 }

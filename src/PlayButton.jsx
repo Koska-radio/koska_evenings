@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import "./style.css";
+import "./App.css";
 
 function PlayButton() {
   const [isPlaying, setIsPlaying] = useState(false);
