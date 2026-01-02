@@ -43,7 +43,7 @@ function Archive() {
                         loading="lazy"
                       />
                       <div className="track-overlay">
-                        <a href={track.weblink} target="_blank" rel="noopener noreferrer" className="play-overlay">
+                        <a href={track.weblink} target="_blank" rel="noopener noreferrer" className="track-play-overlay">
                           ▶
                         </a>
                       </div>
@@ -51,7 +51,6 @@ function Archive() {
                     <div className="track-info">
                       <h3>{track.title}</h3>
                       <p className="track-details">
-                        <span>{track.duration}</span>
                         <span>{track.listens} plays</span>
                       </p>
                     </div>

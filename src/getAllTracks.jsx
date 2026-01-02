@@ -2,34 +2,44 @@ import axios from 'axios';
 
 async function getAllTracks() {
   try {
-    // Call Netlify Function instead of API directly 
-    const response = await axios.get('/.netlify/functions/getTracks');
+    // Include your API key in the request headers
+    const response = await axios.get('https://api.evenings.co/v1/tracks/', {
+      headers: {
+        'Authorization': `Bearer ${process.env.REACT_APP_API_KEY}`
+      }
+    });
     
     const tracks = response.data;
     
-    // Debug: Log raw API response to identify field values
-    if (tracks.length > 0) {
-      console.log('Raw API response (first track):', tracks[0]);
-      console.log('URL field value:', tracks[0].url);
-    }
-    
     if (!Array.isArray(tracks)) {
+      console.error('Expected an array of tracks but received:', typeof tracks);
       return [];
     }
     
-    const extractedTracks = tracks.map(track => ({
-      id: track.id,
-      title: track.title,
-      // Construct the evenings.fm track page URL using the track ID
-      weblink: track.url || `https://evenings.fm/koska-radio/tracks/${track.id}`,
-      duration: track.duration,
-      filetype: track.filetype,
-      listens: track.listens,
-      cover: track.image,
-      published: track.published
-    }));
+    console.log('===== ALL TRACKS =====');
     
-    return extractedTracks.filter(track => track.published !== false);
+    const extractedTracks = tracks.map(track => {
+      const extractedData = {
+        id: track.id,
+        title: track.title,
+        weblink: track.url,
+        duration: track.duration,
+        filetype: track.filetype,
+        listens: track.listens,
+        cover: track.image,
+        published: track.published
+      };
+      
+      console.log(
+        `ID: ${extractedData.id} | Title: ${extractedData.title} | Duration: ${extractedData.duration} | URL: ${extractedData.weblink} | Cover: ${extractedData.cover} | Listens: ${extractedData.listens} | Filetype: ${extractedData.filetype}`
+      );
+      
+      return extractedData;
+    });
+    
+    console.log(`===== TOTAL: ${extractedTracks.length} TRACKS =====`);
+    
+  return extractedTracks.filter(track => track.published !== false);
   } catch (error) {
     console.error('Error fetching tracks:', error);
     throw error;

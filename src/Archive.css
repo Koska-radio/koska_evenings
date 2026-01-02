@@ -56,12 +56,12 @@
   opacity: 1;
 }
 
-.play-overlay {
+.track-play-overlay {
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
-  font-size: 48px;
+  font-size: 56px;
   transition: transform 0.3s ease;
   text-decoration: none;
   padding: 0;
@@ -69,7 +69,7 @@
   line-height: 1;
 }
 
-.play-overlay:hover {
+.track-play-overlay:hover {
   transform: scale(1.1);
   opacity: 0.9;
 }
@@ -132,10 +132,10 @@
     font-size: 12px;
     gap: 12px;
   }
-
-  .play-overlay {
-    font-size: 36px;
-  }
+/* 
+  .track-play-overlay {
+    font-size: 58px;
+  } */
 }
 
 @media (max-width: 480px) {
