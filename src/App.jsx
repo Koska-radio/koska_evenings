@@ -8,7 +8,6 @@ import Gallery from "./Gallery"
 import Archive from "./Archive"
 import catface from "./images/koska.webp";
 import KoskaRadioMarquee from "./KoskaRadioMarquee";
-import koskaLogo from "./images/koska.webp";
 
 function App() {
   return (
@@ -16,7 +15,7 @@ function App() {
       <div className="app">
         <BackgroundLogo />
         <header className="navbar">
-          {/* <img src={catface} alt="Koska Logo" className="koska-logo" /> */}
+          <img src={catface} alt="Koska Logo" className="koska-logo" />
           <nav className="nav-links">
             <NavLink to="/" className={({ isActive }) => isActive ? 'active' : ''}>
               Home
